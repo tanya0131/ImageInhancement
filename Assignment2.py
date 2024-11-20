@@ -56,7 +56,18 @@ def apply_mask(image, x1, y1, x2, y2):
 
 # Streamlit App
 def main():
-    st.title("Image Processing with Streamlit")
+    st.title("Image Enhancement Application")
+
+    # Add a description below the title
+    st.markdown("""
+    This application allows you to upload an image and apply various image processing techniques such as:
+    - Adjusting contrast and brightness
+    - Smoothing the image
+    - Sharpening the image
+    - Applying a mask to a selected region
+
+    Choose the desired option from the sidebar and see the changes applied to your image.
+    """)
 
     # Upload image
     uploaded_image = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
